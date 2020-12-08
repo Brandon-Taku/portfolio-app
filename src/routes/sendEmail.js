@@ -14,14 +14,14 @@ sendEmail.post('', (req, res) => {
        port: 465,
        secure: true,
        auth: {
-            user: 'brendonnyakudya@gmail.com',
-            pass: 'boksburg'
+            user: '', //receiver Email
+            pass: '' //receiver password
        }
     });
  
     let mailOptions = {
        from: req.body.email,
-       to: 'brendonnyakudya@gmail.com', // receiver Email
+       to: '', // receiver Email
        subject: req.body.email, // Subject line
        body: req.body.body, // plain text body
        html: req.body.body // html bodys
